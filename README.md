@@ -1,2 +1,2 @@
-# user-interfaces-portfolio
-Examples and code for the portfolio assignment in the User Interfaces class at Graduaat Programmeren
+# user-interfaces-files
+Examples and files for the User Interfaces course at Thomas More University of Applied Sciences.
