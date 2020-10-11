@@ -1,0 +1,207 @@
+/* Base typography rules */
+html {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.6em;
+  font-weight: 300;
+  background-color: #111;
+  background-image: url("black-thread-light.png");
+  color: #ddd;
+}
+
+/* Don’t make the page too wide on large screens, also some top and bottom breathing space */
+body {
+  width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+  background-image: none;
+  background-color: #333;
+}
+
+/* Base styles and typography */
+header,
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: Ubuntu, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 25px;
+}
+
+p {
+  margin: 20px 0;
+}
+
+em {
+  font-style: italic;
+  font-weight: 300;
+  color: white;
+}
+
+strong {
+  font-weight: 700;
+  color: white;
+}
+
+blockquote {
+  margin: 20px;
+  font-style: italic;
+  font-weight: 300;
+  color: white;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: "“";
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+figure {
+  margin: 20px 0;
+}
+
+figcaption {
+  font-weight: 300;
+  font-style: italic;
+  color: white;
+  line-height: 1.2;
+}
+
+/* page-header and its subcomponents */
+.page-header {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.page-header .subtitle {
+  margin: 0;
+  font-size: 20px;
+  line-height: 25px;
+  font-style: italic;
+}
+
+/* site-nav and its subcomponents */
+.site-nav {
+  margin: 0;
+  padding: 0;
+  font-family: Ubuntu, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.site-nav ul {
+  margin: 0;
+  list-style-type: none;
+  text-align: right;
+}
+
+.site-nav li {
+  display: inline-block;
+  width: 100px;
+  padding: 10px;
+  border-left: 1px solid #ddd;
+  text-align: center;
+}
+
+.site-nav .active {
+  font-weight: 500;
+}
+
+.site-nav a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #ddd;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* main size and layout */
+main {
+  width: 809px; /* 1200 - 20 (padding) - 2 (border) - (3 * 123 nav-items) */
+  margin: 40px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* sidebar size and layout */
+.sidebar {
+  float: right;
+  width: 307px; /* 1200 - 809 - 40 (padding) - 40 (gutter) - 4 (borders) */
+  margin: 40px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* sections and articles */
+section,
+article {
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+section:first-child,
+article:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+/* Footer */
+.page-footer {
+  clear: both;
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  line-height: 1.2;
+}
+.page-footer p {
+  margin: 0;
+}
+.page-footer small {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 12px;
+  color: white;
+}
+
+/* .one-third */
+.one-third {
+  display: inline-block;
+  width: calc(33% - 20px);
+  margin: 20px 10px;
+  vertical-align: top;
+}
+
+.one-third:first-child {
+  margin-left: 0;
+}
+
+/* Decorations */
+.company-name {
+  font-variant: small-caps;
+  color: white;
+  font-weight: 700;
+  font-style: normal;
+}
