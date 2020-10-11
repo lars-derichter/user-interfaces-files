@@ -65,7 +65,7 @@ blockquote {
   color: white;
 }
 
-blockquote:before {
+blockquote::before {
   color: #ccc;
   content: "“";
   font-size: 4em;
