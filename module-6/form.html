@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Voorbeeldformulier</title>
+  </head>
+  <body>
+    <h1>Voorbeeldformulier</h1>
+    <form action="post-demo.php" method="post">
+      <fieldset>
+        <legend>Persoonlijke gegevens</legend>
+        <label for="firstName">Voornaam</label>
+        <input type="text" name="Voornaam" id="firstName" /><br />
+        <label for="lastName">Familienaam</label>
+        <input type="text" name="Familienaam" id="lastName" /><br />
+        <label for="email">E-mail</label>
+        <input type="email" name="E-mail" id="email" />
+      </fieldset>
+      <fieldset>
+        <legend>Uw vraag</legend>
+        <label for="questionType">Soort vraag</label>
+        <select name="Type vraag" id="questionType">
+          <option value="algemeen">Algemene vraag</option>
+          <option value="offerte">Offerte aanvragen</option>
+          <option value="andere">Andere vraag</option></select
+        ><br />
+        <label for="question">Uw vraag</label>
+        <textarea name="Vraag" id="question" cols="30" rows="10"></textarea>
+      </fieldset>
+      <label for="newsletter">Onze nieuwsbrief ontvangen?</label>
+      <input type="checkbox" name="nieuwsbrief" id="newsletter" /><br />
+      <input type="submit" value="Verstuur" />
+    </form>
+  </body>
+</html>

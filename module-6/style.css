@@ -1,0 +1,37 @@
+body {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+fieldset {
+  border: 1px solid darkblue;
+  margin: 20px 0;
+}
+
+fieldset legend {
+  color: darkblue;
+}
+
+label,
+input,
+select {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+fieldset label,
+fieldset input,
+fieldset select {
+  min-width: 320px;
+  vertical-align: top;
+}
+
+label {
+  text-align: right;
+}
+
+input[type="checkbox"],
+input[type="submit"] {
+  width: auto;
+  min-width: auto;
+}
