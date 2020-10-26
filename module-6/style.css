@@ -21,7 +21,8 @@ select {
 
 fieldset label,
 fieldset input,
-fieldset select {
+fieldset select,
+fieldset textarea {
   min-width: 320px;
   vertical-align: top;
 }
