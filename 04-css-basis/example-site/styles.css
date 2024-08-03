@@ -142,6 +142,12 @@ footer {
   text-align: center;
 }
 
+footer a,
+footer a:visited {
+  color: antiquewhite;
+  font-weight: 200;
+}
+
 /* Typography */
 h1,
 h2,
