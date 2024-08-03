@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moderne Programmeertalen</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset and global styles */
+      * {
+        box-sizing: border-box; /* Using border-box for all elements */
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      nav ul li {
+        display: inline-block; /* Example of inline-block */
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+      }
+
+      aside {
+        background-color: #f8f8f8;
+        padding: 10px;
+        float: left;
+        width: 25%;
+      }
+
+      aside article {
+        margin-bottom: 20px;
+      }
+
+      main {
+        padding: 20px;
+        width: 70%;
+        float: right;
+      }
+
+      .hero {
+        background-color: #007bff;
+        color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      footer {
+        clear: both; /* Clear floats */
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+      }
+
+      /* Using percentages and rem units */
+      header,
+      footer,
+      .hero,
+      aside,
+      main,
+      nav ul {
+        padding: 1rem;
+      }
+
+      /* Using the cascade and inheritance */
+      h1,
+      h2,
+      h3 {
+        font-family: "Open Sans", sans-serif; /* Heading font */
+      }
+
+      p {
+        margin: 1rem 0;
+      }
+
+      /* Using complex selectors */
+      nav ul li a:hover,
+      nav ul li a:focus {
+        background-color: #007bff;
+        border-radius: 4px;
+      }
+
+      .hero p {
+        margin: 0;
+      }
+
+      /* Responsive grid layout with named areas */
+      @media (min-width: 600px) {
+        body {
+          display: grid;
+          grid-template-areas:
+            "header header"
+            "aside main"
+            "footer footer";
+          grid-template-columns: 1fr 3fr;
+        }
+
+        header {
+          grid-area: header;
+        }
+
+        aside {
+          grid-area: aside;
+        }
+
+        main {
+          grid-area: main;
+        }
+
+        footer {
+          grid-area: footer;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#articles">Artikels</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <aside>
+      <article>
+        <h2>Python</h2>
+        <p>
+          Python is een veelzijdige taal die vaak wordt gebruikt voor
+          webontwikkeling, data-analyse, en meer.
+        </p>
+      </article>
+      <article>
+        <h2>JavaScript</h2>
+        <p>
+          JavaScript is essentieel voor dynamische webpagina's en wordt gebruikt
+          aan zowel de front-end als back-end.
+        </p>
+      </article>
+    </aside>
+    <main>
+      <section class="hero">
+        <h1>De Belangrijkste Moderne Programmeertalen</h1>
+        <p>Ontdek de talen die de toekomst vormgeven in de tech-wereld.</p>
+      </section>
+      <section id="home">
+        <h2>Waarom Programmeertalen Leren?</h2>
+        <p>
+          Het leren van programmeertalen opent de deur naar vele
+          carrièremogelijkheden in technologie. Of je nu geïnteresseerd bent in
+          webontwikkeling, datawetenschap, of software-engineering, er is een
+          taal voor jou.
+        </p>
+        <p>
+          Programmeren helpt je om logisch te denken en complexe problemen op te
+          lossen, wat essentieel is in vele sectoren.
+        </p>
+      </section>
+      <section id="articles">
+        <h2>Populaire Artikels</h2>
+        <p>
+          Lees meer over de populairste programmeertalen en hoe ze worden
+          gebruikt in de industrie. Bekijk de trends en kies de taal die bij
+          jouw interesses past.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>© 2024 Moderne Programmeertalen. Alle rechten voorbehouden.</p>
+    </footer>
+  </body>
+</html>
+
+<!--
+Gegenereerd met ChatGPT 4o op 2024-08-02
+
+Gebruikte prompt:
+
+Voor een les van het opleidingsonderdeel User Interface (zie ECTS-fiche in bijlage), waarin we de basis van CSS bespreken heb ik een voorbeeld webpagina nodig. Deze zullen we doorheen de les gebruiken om naar terug te verwijzen als voorbeeld van wat we leren.
+
+De requirements voor deze webpagina zijn als volgt:
+
+- HTML en structuur:
+
+  - moet semantisch correct zijn met de juiste section en grouping elements
+  - voorzie een header met navigatiebalk
+  - voor zie een aside met min. 2 articles
+  - voorzie een main met een hero section en een paar normale sections
+
+- CSS:
+
+  - goede mix van selectors: voornamelijk class selectors, maar waar gepast gebruik je ook element selectors; voorzie ook een paar complexe selectors: multiple selectors, descendant selectors, sibling selector, adjecent sibling selector en combinaties hiervan
+  - maak een paar keer handig gebruik van de cascade en de bijbehorende overerving, dit verduidelijk je in de comments
+  - we gebruiken het border-box model voor al onze block-level elements, voeg de nodige code aan het begin van de CSS hiervoor toe
+  - gebruik GEEN px; gebruik % of waar gepast rem om de grootte van elementen aan te geven
+  - een eenvoudig grid met named areas voor de hoofd-layout
+  - gebruik GEEN flex (werk eventueel met inline block)
+  - voorzie een voorbeeld van inline-block (bijv; in de navigatiebalk)
+  - voorzie een image binnen een figure, geef deze een max-width en float deze naar links
+  - maak goed gebruik van kleuren, van decoratieve elementen zoals borders, backgrounds, shadow …
+  - gebruik 2 fonts via google fonts
+
+- Visuele stijl:
+
+  - toegespitst op de doelgroep van hoofdzakelijk tieners en jonge twintigers
+  - een aantrekkelijke, moderne look
+  - wees creatief en gedurfd!
+
+- Inhoud:
+  - zorg voor voldoende natuurgetrouwe inhoud en realistische tekst, zodat ik GEEN lorem ipsum moet toevoegen: een paragraaf bevat minstens 2 - 3 zinnen; een sectie bevat minstens 2-3 paragrafen
+  - het thema van de site is 'de belangrijkste moderne programmeertalen'
+  - de inhoud van de website is in het nederlands
+
+Waar de code complex is is, voeg je commentaren in de code toe om de code te verduidelijken, deze commentaren formuleer je in het Engels. Deze commentaren zijn aan de developers gericht, niet aan mij.
+
+
+-->

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moderne Programmeertalen</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Apply border-box model to all elements */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5%;
+      }
+
+      /* Grid layout for main structure */
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "main aside"
+          "footer footer";
+        grid-template-columns: 1fr 25%;
+        gap: 1rem;
+      }
+
+      header {
+        grid-area: header;
+        background-color: #2c3e50;
+        color: white;
+        padding: 1rem 0;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #3498db;
+      }
+
+      main {
+        grid-area: main;
+      }
+
+      .hero {
+        background-color: #3498db;
+        color: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+      }
+
+      .hero h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      section {
+        background-color: white;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        color: #2c3e50;
+        border-bottom: 0.2rem solid #3498db;
+        padding-bottom: 0.5rem;
+      }
+
+      /* Example of descendant selector and inheritance */
+      .language-list li {
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        border-left: 0.25rem solid #3498db;
+      }
+
+      /* Example of adjacent sibling selector */
+      h2 + p {
+        font-weight: bold;
+        color: #34495e;
+      }
+
+      aside {
+        grid-area: aside;
+      }
+
+      .sidebar-article {
+        background-color: #ecf0f1;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+        border: 0.1rem solid #bdc3c7;
+      }
+
+      /* Example of multiple selectors */
+      .sidebar-article h3,
+      .sidebar-article p {
+        margin-bottom: 0.5rem;
+      }
+
+      figure {
+        margin: 0;
+        padding: 0;
+      }
+
+      figure img {
+        max-width: 100%;
+        height: auto;
+        float: left;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.25rem;
+      }
+
+      /* Clear float after figure */
+      figure::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      footer {
+        grid-area: footer;
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 2rem;
+      }
+
+      /* Example of complex selector combination */
+      main section:nth-child(even) h2 {
+        color: #e74c3c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header>
+        <div class="container">
+          <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#talen">Talen</a></li>
+              <li><a href="#leren">Leren</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="container">
+          <section class="hero">
+            <h1>Ontdek de Wereld van Moderne Programmeertalen</h1>
+            <p>
+              Duik in de fascinerende wereld van coderen en ontdek welke
+              programmeertalen de toekomst vormgeven!
+            </p>
+          </section>
+
+          <section id="talen">
+            <h2>Top Programmeertalen van Nu</h2>
+            <p>
+              De tech-industrie evolueert razendsnel. Hier zijn enkele van de
+              meest invloedrijke programmeertalen van dit moment:
+            </p>
+            <ul class="language-list">
+              <li>
+                Python: Veelzijdig en krachtig, perfect voor beginners en
+                experts.
+              </li>
+              <li>
+                JavaScript: De taal van het web, onmisbaar voor frontend
+                ontwikkeling.
+              </li>
+              <li>
+                Java: Nog steeds een reus in enterprise-ontwikkeling en Android
+                apps.
+              </li>
+              <li>
+                C#: Microsoft's troef voor Windows-ontwikkeling en game design
+                met Unity.
+              </li>
+            </ul>
+          </section>
+
+          <section id="leren">
+            <h2>Hoe Begin Je met Programmeren?</h2>
+            <p>
+              Programmeren leren kan overweldigend lijken, maar met de juiste
+              aanpak is het toegankelijker dan ooit!
+            </p>
+            <p>
+              Begin met het kiezen van een taal die aansluit bij je interesses.
+              Voor webontwikkeling is JavaScript een goede start, terwijl Python
+              uitstekend is voor datawetenschap en algemene
+              programmeerconcepten.
+            </p>
+            <figure>
+              <img
+                src="https://via.placeholder.com/300x200.png?text=Coderen+Leren"
+                alt="Jongeren leren coderen"
+              />
+              <figcaption>
+                Steeds meer jongeren ontdekken de kunst van het programmeren
+              </figcaption>
+            </figure>
+            <p>
+              Online platforms zoals Codecademy, freeCodeCamp en Coursera bieden
+              uitstekende cursussen voor beginners. Vergeet ook niet om deel te
+              nemen aan coding challenges en kleine projecten te bouwen om je
+              vaardigheden in de praktijk te brengen.
+            </p>
+          </section>
+        </div>
+      </main>
+
+      <aside>
+        <div class="container">
+          <article class="sidebar-article">
+            <h3>Programmeertaal van de Maand: Rust</h3>
+            <p>
+              Rust wint aan populariteit vanwege zijn focus op veiligheid en
+              prestaties. Het wordt vaak gebruikt voor systeemprogrammering en
+              is de favoriete taal van veel ontwikkelaars.
+            </p>
+          </article>
+          <article class="sidebar-article">
+            <h3>Upcoming: AI en Machine Learning</h3>
+            <p>
+              Met de opkomst van AI worden talen als Python en R steeds
+              belangrijker. Leer de basics van deze talen om voorop te blijven
+              in de tech-revolutie!
+            </p>
+          </article>
+        </div>
+      </aside>
+
+      <footer>
+        <div class="container">
+          <p>
+            &copy; 2024 Moderne Programmeertalen | Ontworpen door Coole Coders
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+<!--
+Claude - Opus 3.5 op 2024-08-03
+
+Gebruikte prompt:
+
+Voor een les van het opleidingsonderdeel User Interface (zie ECTS-fiche in bijlage), waarin we de basis van CSS bespreken heb ik een voorbeeld webpagina nodig. Deze zullen we doorheen de les gebruiken om naar terug te verwijzen als voorbeeld van wat we leren.
+
+De requirements voor deze webpagina zijn als volgt:
+
+- HTML en structuur:
+
+  - moet semantisch correct zijn met de juiste section en grouping elements
+  - voorzie een header met navigatiebalk
+  - voor zie een aside met min. 2 articles
+  - voorzie een main met een hero section en een paar normale sections
+
+- CSS:
+
+  - goede mix van selectors: voornamelijk class selectors, maar waar gepast gebruik je ook element selectors; voorzie ook een paar complexe selectors: multiple selectors, descendant selectors, sibling selector, adjecent sibling selector en combinaties hiervan
+  - maak een paar keer handig gebruik van de cascade en de bijbehorende overerving, dit verduidelijk je in de comments
+  - we gebruiken het border-box model voor al onze block-level elements, voeg de nodige code aan het begin van de CSS hiervoor toe
+  - gebruik GEEN px; gebruik % of waar gepast rem om de grootte van elementen aan te geven
+  - een eenvoudig grid met named areas voor de hoofd-layout
+  - gebruik GEEN flex (werk eventueel met inline block)
+  - voorzie een voorbeeld van inline-block (bijv; in de navigatiebalk)
+  - voorzie een image binnen een figure, geef deze een max-width en float deze naar links
+  - maak goed gebruik van kleuren, van decoratieve elementen zoals borders, backgrounds, shadow …
+  - gebruik 2 fonts via google fonts
+
+- Visuele stijl:
+
+  - toegespitst op de doelgroep van hoofdzakelijk tieners en jonge twintigers
+  - een aantrekkelijke, moderne look
+  - wees creatief en gedurfd!
+
+- Inhoud:
+  - zorg voor voldoende natuurgetrouwe inhoud en realistische tekst, zodat ik GEEN lorem ipsum moet toevoegen: een paragraaf bevat minstens 2 - 3 zinnen; een sectie bevat minstens 2-3 paragrafen
+  - het thema van de site is 'de belangrijkste moderne programmeertalen'
+  - de inhoud van de website is in het nederlands
+
+Waar de code complex is is, voeg je commentaren in de code toe om de code te verduidelijken, deze commentaren formuleer je in het Engels. Deze commentaren zijn aan de developers gericht, niet aan mij.
+
+-->
