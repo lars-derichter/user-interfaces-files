@@ -42,7 +42,7 @@ body {
 }
 
 /* Header and Navigation */
-header {
+#pageheader {
   grid-area: header; /* display in header grid area */
   padding: 1rem 0;
   background-color: #4a90e2;
@@ -88,13 +88,21 @@ aside {
 }
 
 aside h2 {
+  /* to show the difference between descendant and child,  `aside article h2` would make more sense */
   font-size: 1.25rem;
+}
+
+aside > h2 {
+  font-size: 2rem;
 }
 
 aside article {
   margin-bottom: 1.25rem;
   padding-bottom: 1.25rem;
-  border-bottom: 0.0625rem solid #e2e2e2;
+}
+
+aside article ~ article {
+  border-top: 0.0625rem solid #e2e2e2;
 }
 
 aside article a {
@@ -173,6 +181,13 @@ h3 {
 p {
   font-size: 1rem;
   line-height: 1.5em;
+}
+
+h2 + p::first-letter,
+h2 + figure + p::first-letter,
+h3 + p::first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 a {
