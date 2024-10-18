@@ -1,0 +1,130 @@
+/* Universal border-box with inheritance*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+nav {
+  font-family: "Graduate", cursive;
+}
+
+body,
+p,
+figcaption {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #fdd835;
+  padding: 1.25rem;
+  width: 75rem; /* 1200px */
+  margin: auto;
+  border-radius: 0.625rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+  gap: 1.25rem;
+}
+
+/* Header */
+header {
+  grid-area: header;
+  background-color: #d32f2f;
+  color: white;
+  text-align: right;
+  padding: 0.625rem;
+  border-radius: 0.625rem 0.625rem 0 0;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+header nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+header nav li {
+  display: inline-block;
+  background-color: #c2185b;
+  padding: 0.875rem 1rem;
+  border: 1px solid #8e24aa;
+  border-radius: 0.625rem;
+  margin-right: 0.625rem;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav li:hover,
+header nav .active {
+  background-color: #7b1fa2;
+  font-weight: bold;
+}
+
+/* Main and Aside */
+main,
+aside {
+  padding: 1.25rem;
+  background-color: #fff;
+  border-radius: 0.3125rem;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+/* Articles */
+article {
+  margin-bottom: 1.875rem;
+  border-top: 3px solid #8e24aa;
+}
+
+article.first {
+  border: none;
+}
+
+/* Figures and Figcaptions */
+figure {
+  margin: 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.3125rem;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.3125rem;
+}
+
+/* Footer */
+footer {
+  grid-column: 1 / -1;
+  background-color: #d32f2f;
+  color: white;
+  text-align: center;
+  padding: 0.625rem;
+  border-radius: 0 0 0.625rem 0.625rem;
+}

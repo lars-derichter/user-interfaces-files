@@ -1,0 +1,122 @@
+/* Universal border-box */
+* {
+  box-sizing: border-box;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+nav {
+  font-family: "Exo", sans-serif;
+}
+
+body,
+p,
+figcaption {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #e8f5e9;
+  width: 62.5rem; /* 1000px */
+  margin: auto;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  grid-area: header;
+  background-color: #388e3c;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* Navigation */
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+header nav li {
+  display: inline-block;
+  background-color: #4caf50;
+  padding: 0.75rem 1rem;
+  border: 1px solid #2e7d32;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav li:hover,
+header nav .active {
+  background-color: #43a047;
+  font-weight: bold;
+}
+
+/* Main and Aside */
+main,
+aside {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+/* Articles */
+article {
+  margin-bottom: 1rem;
+  border-top: 2px solid #2e7d32;
+}
+
+article:first-of-type {
+  border: none;
+}
+
+/* Figures and Figcaptions */
+figure {
+  margin: 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  background-color: #388e3c;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
