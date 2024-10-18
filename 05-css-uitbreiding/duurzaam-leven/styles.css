@@ -1,6 +1,11 @@
-/* Universal border-box */
-* {
+/* Universal border-box with inheritance*/
+html {
   box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 /* Typography */
@@ -21,7 +26,7 @@ figcaption {
 body {
   background-color: #e8f5e9;
   width: 62.5rem; /* 1000px */
-  margin: auto;
+  margin: 0 auto;
   border-radius: 0.5rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -29,7 +34,7 @@ body {
     "header header"
     "main aside"
     "footer footer";
-  grid-gap: 1rem;
+  gap: 1rem;
   padding: 1rem;
 }
 
@@ -90,7 +95,7 @@ article {
   border-top: 2px solid #2e7d32;
 }
 
-article:first-of-type {
+article:first-child {
   border: none;
 }
 
