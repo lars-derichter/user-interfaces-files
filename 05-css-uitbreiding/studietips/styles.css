@@ -98,7 +98,7 @@ article {
   border-top: 3px solid #8e24aa;
 }
 
-article.first {
+article:first-child {
   border: none;
 }
 
