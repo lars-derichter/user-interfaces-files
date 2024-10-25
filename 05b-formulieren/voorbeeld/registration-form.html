@@ -1,113 +1,150 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Registratie - CodeCamp</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="form-container">
-        <h1 class="form-title">Registreer bij CodeCamp</h1>
-        
-        <form action="#" method="POST" id="registrationForm">
-            <!-- Persoonlijke informatie fieldset -->
-            <fieldset>
-                <legend>Persoonlijke Informatie</legend>
-                
-                <p>
-                    <label for="firstName">Voornaam <span class="required">*</span></label>
-                    <input type="text" id="firstName" name="firstName" required>
-                </p>
+      <h1 class="form-title">Registreer bij CodeCamp</h1>
 
-                <p>
-                    <label for="lastName">Achternaam <span class="required">*</span></label>
-                    <input type="text" id="lastName" name="lastName" required>
-                </p>
+      <form action="#" method="POST" id="registrationForm">
+        <!-- Persoonlijke informatie fieldset -->
+        <fieldset>
+          <legend>Persoonlijke Informatie</legend>
 
-                <p>
-                    <label for="email">E-mailadres <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required>
-                </p>
+          <p>
+            <label for="firstName"
+              >Voornaam <span class="required">*</span></label
+            >
+            <input type="text" id="firstName" name="firstName" required />
+          </p>
 
-                <p>
-                    <label for="password">Wachtwoord <span class="required">*</span></label>
-                    <input type="password" id="password" name="password" required>
-                </p>
+          <p>
+            <label for="lastName"
+              >Achternaam <span class="required">*</span></label
+            >
+            <input type="text" id="lastName" name="lastName" required />
+          </p>
 
-                <p>
-                    <label for="phone">Telefoonnummer</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
-                </p>
+          <p>
+            <label for="email"
+              >E-mailadres <span class="required">*</span></label
+            >
+            <input type="email" id="email" name="email" required />
+          </p>
 
-                <p>
-                    <label for="birthdate">Geboortedatum</label>
-                    <input type="date" id="birthdate" name="birthdate">
-                </p>
-            </fieldset>
+          <p>
+            <label for="password"
+              >Wachtwoord <span class="required">*</span></label
+            >
+            <input type="password" id="password" name="password" required />
+          </p>
 
-            <!-- Opleiding fieldset -->
-            <fieldset>
-                <legend>Opleiding & Interesses</legend>
+          <p>
+            <label for="phone">Telefoonnummer</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" />
+          </p>
 
-                <p>
-                    <label for="experience">Programmeervaring</label>
-                    <select id="experience" name="experience">
-                        <option value="">Maak een keuze</option>
-                        <option value="beginner">Beginner</option>
-                        <option value="intermediate">Gevorderd</option>
-                        <option value="advanced">Expert</option>
-                    </select>
-                </p>
+          <p>
+            <label for="birthdate">Geboortedatum</label>
+            <input type="date" id="birthdate" name="birthdate" />
+          </p>
+        </fieldset>
 
-                <p>
-                    <label>Gewenste richting</label>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" id="frontend" name="track" value="frontend">
-                            <label for="frontend">Frontend Development</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" id="backend" name="track" value="backend">
-                            <label for="backend">Backend Development</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" id="fullstack" name="track" value="fullstack">
-                            <label for="fullstack">Fullstack Development</label>
-                        </div>
-                    </div>
-                </p>
+        <!-- Opleiding fieldset -->
+        <fieldset>
+          <legend>Opleiding & Interesses</legend>
 
-                <p>
-                    <label>Interesses</label>
-                    <div class="checkbox-group">
-                        <div class="checkbox-option">
-                            <input type="checkbox" id="html" name="interests" value="html">
-                            <label for="html">HTML/CSS</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" id="javascript" name="interests" value="javascript">
-                            <label for="javascript">JavaScript</label>
-                        </div>
-                        <div class="checkbox-option">
-                            <input type="checkbox" id="python" name="interests" value="python">
-                            <label for="python">Python</label>
-                        </div>
-                    </div>
-                </p>
+          <p>
+            <label for="experience">Programmeervaring</label>
+            <select id="experience" name="experience">
+              <option value="">Maak een keuze</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Gevorderd</option>
+              <option value="advanced">Expert</option>
+            </select>
+          </p>
 
-                <p>
-                    <label for="motivation">Motivatie</label>
-                    <textarea id="motivation" name="motivation" rows="4"></textarea>
-                </p>
-            </fieldset>
-
-            <!-- Buttons -->
-            <div class="button-container">
-                <button type="submit" class="button submit-button">Registreren</button>
-                <button type="reset" class="button reset-button">Formulier Wissen</button>
+          <div>
+            <label>Gewenste richting</label>
+            <div class="radio-group">
+              <p class="radio-option">
+                <input
+                  type="radio"
+                  id="frontend"
+                  name="track"
+                  value="frontend"
+                />
+                <label for="frontend">Frontend Development</label>
+              </p>
+              <p class="radio-option">
+                <input type="radio" id="backend" name="track" value="backend" />
+                <label for="backend">Backend Development</label>
+              </p>
+              <p class="radio-option">
+                <input
+                  type="radio"
+                  id="fullstack"
+                  name="track"
+                  value="fullstack"
+                />
+                <label for="fullstack">Fullstack Development</label>
+              </p>
             </div>
-        </form>
+          </div>
+
+          <div>
+            <label>Interesses</label>
+            <div class="checkbox-group">
+              <p class="checkbox-option">
+                <input
+                  type="checkbox"
+                  id="html"
+                  name="interests"
+                  value="html"
+                />
+                <label for="html">HTML/CSS</label>
+              </p>
+              <p class="checkbox-option">
+                <input
+                  type="checkbox"
+                  id="javascript"
+                  name="interests"
+                  value="javascript"
+                />
+                <label for="javascript">JavaScript</label>
+              </p>
+              <p class="checkbox-option">
+                <input
+                  type="checkbox"
+                  id="python"
+                  name="interests"
+                  value="python"
+                />
+                <label for="python">Python</label>
+              </p>
+            </div>
+          </div>
+
+          <p>
+            <label for="motivation">Motivatie</label>
+            <textarea id="motivation" name="motivation" rows="4"></textarea>
+          </p>
+        </fieldset>
+
+        <!-- Buttons -->
+        <div class="button-container">
+          <button type="submit" class="button submit-button">
+            Registreren
+          </button>
+          <button type="reset" class="button reset-button">
+            Formulier Wissen
+          </button>
+        </div>
+      </form>
     </div>
-</body>
+  </body>
 </html>
