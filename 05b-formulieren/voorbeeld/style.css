@@ -35,8 +35,8 @@ legend {
   color: #444;
 }
 
-/* Formulier groepen voor ordelijke spacing */
-.form-group {
+/* Paragraaf styling voor form controls */
+fieldset p {
   margin-bottom: 20px;
   text-align: left;
 }
@@ -85,8 +85,9 @@ input[type="checkbox"] {
 }
 
 /* Button styling */
-.button-group {
+.button-container {
   text-align: center;
+  margin-top: 20px;
 }
 
 .button {
