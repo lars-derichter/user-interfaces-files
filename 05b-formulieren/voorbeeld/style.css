@@ -36,7 +36,8 @@ legend {
 }
 
 /* Paragraaf styling voor form controls */
-fieldset p {
+fieldset p,
+fieldset div {
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -78,6 +79,7 @@ input[type="checkbox"] {
   display: inline-block;
   width: 18rem;
   vertical-align: top;
+  margin-bottom: 0;
 }
 
 .radio-option,
