@@ -1,3 +1,4 @@
+/*** Vanaf hier altijd kopiëren in je eigen CSS ***/
 /* Universal border-box with inheritance*/
 html {
   box-sizing: border-box;
@@ -8,12 +9,18 @@ html {
   box-sizing: inherit;
 }
 
-/* Typography */
+/* Image sizing (prevent oversized images) */
+img {
+  max-width: 100%;
+}
+/*** Tot hier altijd kopiëren in je eigen CSS ***/
+
+/* Typografie */
 h1,
 h2,
 h3,
 nav {
-  font-family: "Exo", sans-serif;
+  font-family: Exo, sans-serif;
 }
 
 body {
@@ -42,31 +49,32 @@ header {
   background-color: #388e3c;
   color: white;
   padding: 0.5rem;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
-/* Navigation */
-header nav ul {
-  margin: 0;
-  padding: 0;
+/* Navigatie */
+nav ul {
+  padding: 0; /* Anders krijg je standaard padding van de browser */
 }
 
-header nav li {
+nav li {
   display: inline-block;
   background-color: #4caf50;
-  padding: 0.75rem 1rem;
   border: 1px solid #2e7d32;
+  padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   margin-right: 0.5rem;
 }
 
-header nav a {
+nav li a {
+  /* anders blauwe, onderlijnde links */
   color: white;
   text-decoration: none;
 }
 
-header nav li:hover,
-header nav .active {
+nav li:hover,
+nav li:active {
   background-color: #43a047;
   font-weight: bold;
 }
@@ -74,7 +82,7 @@ header nav .active {
 /* Main and Aside */
 main,
 aside {
-  background-color: #fff;
+  background-color: white;
   padding: 1rem;
   border-radius: 0.25rem;
 }
@@ -82,29 +90,28 @@ aside {
 main {
   grid-area: main;
 }
-
 aside {
   grid-area: aside;
 }
 
-/* Articles */
+/* Article styles */
 article {
+  border-top: 2px solid #388e3c;
   margin-bottom: 1rem;
-  border-top: 2px solid #2e7d32;
 }
 
 article:first-child {
-  border: none;
+  /* je kan ook de klasse gebruiken */
+  border-top: none;
 }
 
-/* Figures and Figcaptions */
+/* figure and figcaption */
 figure {
   margin: 0;
+  border-radius: 0.25rem;
 }
 
 figure img {
-  max-width: 100%;
-  height: auto;
   border-radius: 0.25rem;
 }
 
@@ -121,5 +128,6 @@ footer {
   color: white;
   text-align: center;
   padding: 0.5rem;
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
